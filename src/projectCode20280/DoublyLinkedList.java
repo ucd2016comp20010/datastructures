@@ -62,6 +62,19 @@ public class DoublyLinkedList<E> implements List<E> {
 		return null;
 	}
 	
+
+	@Override
+	public void addFirst(E e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void addLast(E e) {
+		// TODO Auto-generated method stub
+		
+	}
+	
 	public static void main(String[] args) {
 		   DoublyLinkedList<Integer> ll = new DoublyLinkedList<Integer>();
            ll.addFirst(0);
@@ -80,5 +93,6 @@ public class DoublyLinkedList<E> implements List<E> {
                    System.out.println("value: " + e);
            }
 	}
+
 	
 }

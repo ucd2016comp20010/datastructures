@@ -44,21 +44,6 @@ public class SinglyLinkedList<E> implements List<E> {
 		return 0;
 	}
 
-	public static void main(String[] args) {
-		String[] alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
-
-		SinglyLinkedList<String> sll = new SinglyLinkedList<String>();
-		for (String s : alphabet) {
-			sll.addFirst(s);
-			sll.addLast(s);
-		}
-		System.out.println(sll.toString());
-
-		for (String s : sll) {
-			System.out.print(s + ", ");
-		}
-	}
-
 	@Override
 	public E removeFirst() {
 		// TODO Auto-generated method stub
@@ -70,4 +55,42 @@ public class SinglyLinkedList<E> implements List<E> {
 		// TODO Auto-generated method stub
 		return null;
 	}
+
+	@Override
+	public void addFirst(E e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void addLast(E e) {
+		// TODO Auto-generated method stub
+		
+	}
+	
+	public static void main(String[] args) {
+		String[] alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
+
+		SinglyLinkedList<String> sll = new SinglyLinkedList<String>();
+		for (String s : alphabet) {
+			sll.addFirst(s);
+			sll.addLast(s);
+		}
+		System.out.println(sll.toString());
+
+		sll.removeFirst();
+		System.out.println(sll.toString());
+		
+		sll.removeLast();
+		System.out.println(sll.toString());
+
+		sll.remove(2);
+		System.out.println(sll.toString());
+		
+		for (String s : sll) {
+			System.out.print(s + ", ");
+		}
+	}
+
+
 }
