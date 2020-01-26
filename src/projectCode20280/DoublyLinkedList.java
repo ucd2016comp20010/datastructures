@@ -63,8 +63,22 @@ public class DoublyLinkedList<E> implements List<E> {
 	}
 	
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		   DoublyLinkedList<Integer> ll = new DoublyLinkedList<Integer>();
+           ll.addFirst(0);
+           ll.addFirst(1);
+           ll.addFirst(2);
+           ll.addLast(-1);
+           System.out.println(ll);
+           
+           ll.removeFirst();
+           System.out.println(ll);
 
+           ll.removeLast();
+           System.out.println(ll);
+           
+           for(Integer e: ll) {
+                   System.out.println("value: " + e);
+           }
 	}
 	
 }

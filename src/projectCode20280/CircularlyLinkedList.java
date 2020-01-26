@@ -5,9 +5,9 @@ import java.util.Iterator;
 public class CircularlyLinkedList<E> implements List<E> {
 
 	private class Node<E> {
-		
+
 	}
-	
+
 	@Override
 	public int size() {
 		// TODO Auto-generated method stub
@@ -56,9 +56,50 @@ public class CircularlyLinkedList<E> implements List<E> {
 		return null;
 	}
 
-	public static void main(String[] args) {
+	@Override
+	public void addFirst(E e) {
 		// TODO Auto-generated method stub
 
 	}
 
+	@Override
+	public void addLast(E e) {
+		// TODO Auto-generated method stub
+
+	}
+
+	public void rotate() {
+				
+	}
+	
+	
+	public static void main(String[] args) {
+		CircularlyLinkedList<Integer> ll = new CircularlyLinkedList<Integer>();
+		for(int i = 10; i < 20; ++i) {
+			ll.addLast(i);
+		}
+
+		System.out.println(ll);
+
+		ll.removeFirst();
+		System.out.println(ll);
+
+		ll.removeLast();
+
+		ll.rotate();
+		System.out.println(ll);
+
+		ll.removeFirst();
+		ll.rotate();
+		System.out.println(ll);
+
+		ll.removeLast();
+		ll.rotate();
+		System.out.println(ll);
+
+		for (Integer e : ll) {
+			System.out.println("value: " + e);
+		}
+
+	}
 }
