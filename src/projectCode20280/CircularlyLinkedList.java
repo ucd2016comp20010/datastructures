@@ -21,7 +21,7 @@ public class CircularlyLinkedList<E> implements List<E> {
 	}
 
 	@Override
-	public E get(int i, E e) {
+	public E get(int i) {
 		// TODO Auto-generated method stub
 		return null;
 	}

@@ -16,7 +16,7 @@ public interface List<E> extends Iterable<E> {
 	
 	boolean isEmpty();
 	
-	E get(int i, E e);
+	E get(int i);
 	
 	void add(int i, E e);
 	
