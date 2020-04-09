@@ -14,7 +14,7 @@ import java.util.stream.Collectors;
 public class TreeMap<K extends Comparable<K>, V> extends AbstractSortedMap<K, V> {
 
 	// We reuse the LinkedBinaryTree class. A limitation here is that we only use the key.
-	protected LinkedBinaryTree<K> tree = new LinkedBinaryTree<K>();
+	protected LinkedBinaryTree<Entry<K, V>> tree = new LinkedBinaryTree<Entry<K,V>>();
 
 	/** Constructs an empty map using the natural ordering of keys. */
 	public TreeMap() {
