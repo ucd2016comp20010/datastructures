@@ -11,7 +11,7 @@ import java.util.stream.Collectors;
  * An implementation of a sorted map using a binary search tree.
  */
 
-public class TreeMap<K extends Comparable<K>, V> extends AbstractSortedMap<K, V> {
+public class TreeMap<K, V> extends AbstractSortedMap<K, V> {
 
 	// We reuse the LinkedBinaryTree class. A limitation here is that we only use the key.
 	protected LinkedBinaryTree<K> tree = new LinkedBinaryTree<K>();
@@ -22,6 +22,11 @@ public class TreeMap<K extends Comparable<K>, V> extends AbstractSortedMap<K, V>
 		tree.addRoot(null); // create a sentinel leaf as root
 	}
 
+    public TreeMap(Comparator<K> comp) {
+        super(comp);              // the AbstractSortedMap constructor
+        tree.addRoot(null);       // create a sentinel leaf as root
+    }
+    
 	/**
 	 * Returns the number of entries in the map.
 	 * 
@@ -79,11 +84,12 @@ public class TreeMap<K extends Comparable<K>, V> extends AbstractSortedMap<K, V>
 	}
 
 	protected void set(Position<Entry<K, V>> p, Entry<K, V> e) {
-		tree.set(p, e);
+		// TODO
 	}
 
 	protected Entry<K, V> remove(Position<Entry<K, V>> p) {
-		return tree.remove(p);
+		// TODO
+		return null;
 	}
 
 	/**
@@ -306,4 +312,27 @@ public class TreeMap<K extends Comparable<K>, V> extends AbstractSortedMap<K, V>
 
 		System.out.println("tree entries after removal: " + treeMap.entrySet());
 	}
+
+	/** Overrides the TreeMap rebalancing hook that is called after an insertion. */
+	protected void rebalanceInsert(Position<Entry<K, V>> p) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	/** Overrides the TreeMap rebalancing hook that is called after a deletion. */
+	protected void rebalanceDelete(Position<Entry<K, V>> p) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	/** Overrides the TreeMap rebalancing hook that is called after a node access. */
+	protected void rebalanceAccess(Position<Entry<K, V>> p) {
+		// TODO Auto-generated method stub
+		
+	}
+	
+    protected void rotate(Position<Entry<K, V>> p) {
+        // TODO
+    }
+    
 }
